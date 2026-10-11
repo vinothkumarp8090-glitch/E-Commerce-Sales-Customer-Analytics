@@ -135,7 +135,6 @@ The interactive dashboard includes:
 **Interactive filters:** Year, Month, Category, and State.
 
 ### Dashboard Preview
-
 ```markdown
 ![Power BI Dashboard](screenshots/dashboard.png)
 ```
