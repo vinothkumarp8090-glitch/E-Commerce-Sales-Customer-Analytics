@@ -6,7 +6,7 @@ An end-to-end data analytics project using **Python, SQL, MySQL, and Power BI** 
 
 This project analyzes e-commerce sales data from India for 2023 to identify business trends, evaluate product and regional performance, and understand customer purchasing behavior.
 
-The project follows a data analytics workflow, from data understanding and cleaning to exploratory analysis, SQL business queries, customer segmentation, and interactive dashboard development.
+The project follows a complete data analytics workflow, from data understanding and cleaning to exploratory data analysis, SQL business queries, customer segmentation, and interactive dashboard development.
 
 ## 🎯 Business Objectives
 
@@ -40,7 +40,8 @@ E-Commerce-Sales-Customer-Analytics/
 ├── Python/
 │   ├── 01_data_understanding.ipynb
 │   ├── 02_data_quality_cleaning.ipynb
-│   └── 03_exploratory_data_analysis.ipynb
+│   ├── 03_exploratory_data_analysis.ipynb
+│   └── ecommerce_sales_india.csv
 │
 ├── SQL/
 │   └── 01_business_analysis.sql
@@ -49,17 +50,21 @@ E-Commerce-Sales-Customer-Analytics/
 │   └── E-Commerce_Sales_Customer_Analytics.pbix
 │
 ├── screenshots/
-└── documentation/
+│   └── dashboard.png
+│
+├── documentation/
+│
+└── README.md
 ```
 
 ## 📊 Dataset Overview
 
 - **Records:** 2,000 rows
-- **Time period:** January–December 2023
+- **Time Period:** January–December 2023
 - **Geography:** India
-- **Data includes:** Orders, customers, products, categories, quantities, sales, profit, cities, and states.
+- **Data Includes:** Orders, customers, products, categories, quantities, sales, profit, cities, and states.
 
-The dataset includes order-level identifiers and product line items, allowing sales and customer behavior to be analyzed at different levels.
+The dataset contains order and product line-item information, allowing sales performance and customer behavior to be analyzed at different levels.
 
 ## 🧹 Data Cleaning & Preparation
 
@@ -68,7 +73,7 @@ The data preparation workflow included:
 - Inspecting dataset structure and data types.
 - Checking missing values and duplicate records.
 - Converting order dates to datetime format.
-- Removing duplicate rows where appropriate.
+- Removing duplicate records where appropriate.
 - Trimming whitespace from text columns.
 - Creating year, month, month name, and quarter features.
 - Calculating profit margin.
@@ -76,7 +81,7 @@ The data preparation workflow included:
 
 Potentially legitimate negative-profit transactions were retained for analysis.
 
-## 📈 Exploratory Data Analysis
+## 📈 Exploratory Data Analysis (EDA)
 
 The analysis explored:
 
@@ -105,7 +110,7 @@ MySQL queries were used to investigate:
 
 ## 👥 Customer Analytics & RFM Segmentation
 
-Customer analysis was performed using order history and purchasing behavior.
+Customer analysis was performed using purchasing history and customer-level metrics.
 
 The RFM framework evaluates:
 
@@ -113,11 +118,13 @@ The RFM framework evaluates:
 - **Frequency:** How often a customer purchased.
 - **Monetary:** How much a customer spent.
 
-Customers were grouped into segments such as Champions, Loyal Customers, Potential Loyalists, New Customers, At Risk, and Hibernating, using rule-based RFM scores.
+Rule-based RFM scoring was used to group customers into segments such as Champions, Loyal Customers, Potential Loyalists, New Customers, At Risk, and Hibernating.
 
 ## 📊 Power BI Dashboard
 
-The interactive dashboard includes:
+The interactive dashboard includes the following KPIs and visualizations:
+
+**Key Performance Indicators (KPIs)**
 
 - Total Sales
 - Total Profit
@@ -126,37 +133,43 @@ The interactive dashboard includes:
 - Total Quantity
 - Average Order Value
 - Profit Margin
+
+**Data Visualizations**
+
 - Monthly Sales & Profit Trend
 - Total Sales by Category
 - Total Sales by State
 - Top 5 Products by Sales
 - Total Customers by State
 
-**Interactive filters:** Year, Month, Category, and State.
+**Interactive Filters:** Year, Month, Category, and State.
+
+### Interactive Power BI Dashboard
+
+[**Open Power BI Report**](https://app.powerbi.com/groups/me/reports/3d96fdbb-3906-4194-a7b7-717385b7588f/9d10ba002090423dbc61?experience=power-bi)
 
 ### Dashboard Preview
-```markdown
+
 ![Power BI Dashboard](screenshots/dashboard.png)
-```
 
 ## 💡 Key Business Insights
 
-The dashboard is designed to help identify:
+The analysis and dashboard help identify:
 
-- The categories contributing most to total sales.
-- The states with the strongest sales and customer presence.
+- Categories contributing the most to total sales.
+- States with strong sales performance and customer presence.
 - Monthly fluctuations in sales and profit.
-- The products generating the highest sales.
+- Products generating the highest sales.
 - Customer segments that may benefit from retention campaigns.
 
-Specific business recommendations should be based on the results returned by the analysis.
+Business recommendations should be based on the actual results of the analysis rather than assumed trends.
 
 ## 🚀 How to Explore This Project
 
-1. Download or clone this repository.
+1. Clone or download this GitHub repository.
 2. Open the Python notebooks in Jupyter Notebook.
 3. Review the original and cleaned datasets in the `Data` folder.
-4. Run the SQL queries using MySQL after importing the cleaned dataset.
+4. Run the SQL queries in MySQL after importing the dataset into your database.
 5. Open the `.pbix` file in Power BI Desktop to explore the dashboard.
 
 **Note:** The Power BI report uses a MySQL data source. You may need to update the connection settings to match your local MySQL installation.
@@ -178,5 +191,3 @@ Specific business recommendations should be based on the results returned by the
 **Vinothkumar**
 
 Data Science | Data Analytics | Python | SQL | MySQL | Power BI
-
-
