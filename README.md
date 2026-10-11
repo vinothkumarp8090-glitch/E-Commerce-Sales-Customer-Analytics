@@ -136,8 +136,6 @@ The interactive dashboard includes:
 
 ### Dashboard Preview
 
-Add your dashboard screenshot to the `screenshots` folder, then update the filename in this section:
-
 ```markdown
 ![Power BI Dashboard](screenshots/dashboard.png)
 ```
